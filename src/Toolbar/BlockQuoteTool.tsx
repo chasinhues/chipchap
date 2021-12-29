@@ -6,10 +6,10 @@ const BlockQuoteTool = ({ editor }: WithEditor) => {
   return (
     <ToolbarButton
       label="Blockquote"
-      onClick={() => editor?.chain().focus().toggleBlockquote().run()}
-      isActive={editor?.isActive("blockquote")}
+      onClick={() => editor.commands.toggleBlockquote()}
+      isActive={editor.isActive("blockquote")}
       icon={<GoQuote />}
-      disabled={!editor?.isEditable}
+      disabled={!editor.isEditable}
     />
   );
 };

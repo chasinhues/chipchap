@@ -7,7 +7,6 @@ import ParagraphTool from "./ParagraphTool";
 import BlockQuoteTool from "./BlockQuoteTool";
 import UnorderedListTool from "./UnorderedListTool";
 import OrderedListTool from "./OrderedListTool";
-import LinkTool from "./LinkTool";
 import { WithEditor } from "../types";
 
 interface ToolbarProps extends WithEditor, WrapProps {}
@@ -18,10 +17,6 @@ export const Toolbar = ({ editor, ...wrapProps }: ToolbarProps) => {
   }
   return (
     <Wrap shouldWrapChildren {...wrapProps}>
-      {/*
-       * Typography tools
-       * TODO replace with typography dropdown
-       */}
       <ParagraphTool editor={editor} />
       <Divider orientation="vertical" />
 
@@ -29,7 +24,6 @@ export const Toolbar = ({ editor, ...wrapProps }: ToolbarProps) => {
       <BoldTool editor={editor} />
       <ItalicTool editor={editor} />
       <CodeTool editor={editor} />
-      <LinkTool editor={editor} />
       <Divider orientation="vertical" />
 
       {/* Block styles */}

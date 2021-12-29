@@ -6,10 +6,10 @@ const ItalicTool = ({ editor }: WithEditor) => {
   return (
     <ToolbarButton
       label="Italic"
-      onClick={() => editor?.chain().focus().toggleItalic().run()}
-      isActive={editor?.isActive("italic")}
+      onClick={() => editor.commands.toggleItalic()}
+      isActive={editor.isActive("italic")}
       icon={<BsTypeItalic />}
-      disabled={!editor?.isEditable}
+      disabled={!editor.isEditable}
     >
       I
     </ToolbarButton>

@@ -6,10 +6,10 @@ const CodeTool = ({ editor }: WithEditor) => {
   return (
     <ToolbarButton
       label="Code"
-      onClick={() => editor?.chain().focus().toggleCode().run()}
-      isActive={editor?.isActive("code")}
+      onClick={() => editor.commands.toggleCode()}
+      isActive={editor.isActive("code")}
       icon={<BsCode />}
-      disabled={!editor?.isEditable}
+      disabled={!editor.isEditable}
     />
   );
 };

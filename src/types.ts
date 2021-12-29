@@ -1,5 +1,5 @@
 import { Editor } from "@tiptap/react";
 
 export interface WithEditor {
-  editor: Editor | null;
+  editor: Editor;
 }
