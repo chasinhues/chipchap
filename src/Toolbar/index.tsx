@@ -1,4 +1,5 @@
 import { Divider, Skeleton, Wrap, WrapProps } from "@chakra-ui/react";
+import { WithEditor } from "../types";
 import BoldTool from "./BoldTool";
 import CodeBlockTool from "./CodeBlockTool";
 import CodeTool from "./CodeTool";
@@ -7,7 +8,12 @@ import ParagraphTool from "./ParagraphTool";
 import BlockQuoteTool from "./BlockQuoteTool";
 import UnorderedListTool from "./UnorderedListTool";
 import OrderedListTool from "./OrderedListTool";
-import { WithEditor } from "../types";
+import HorizontalRuleTool from "./HorizontalRuleTool";
+import {
+  HeadingOneTool,
+  HeadingThreeTool,
+  HeadingTwoTool,
+} from "./HeadingTool";
 
 interface ToolbarProps extends WithEditor, WrapProps {}
 
@@ -18,6 +24,9 @@ export const Toolbar = ({ editor, ...wrapProps }: ToolbarProps) => {
   return (
     <Wrap shouldWrapChildren {...wrapProps}>
       <ParagraphTool editor={editor} />
+      <HeadingOneTool editor={editor} />
+      <HeadingTwoTool editor={editor} />
+      <HeadingThreeTool editor={editor} />
       <Divider orientation="vertical" />
 
       {/* Inline styles */}
@@ -31,6 +40,7 @@ export const Toolbar = ({ editor, ...wrapProps }: ToolbarProps) => {
       <OrderedListTool editor={editor} />
       <CodeBlockTool editor={editor} />
       <BlockQuoteTool editor={editor} />
+      <HorizontalRuleTool editor={editor} />
     </Wrap>
   );
 };
