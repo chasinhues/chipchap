@@ -6,7 +6,7 @@ const CodeBlockTool = ({ editor }: WithEditor) => {
   return (
     <ToolbarButton
       label="Codeblock"
-      onClick={() => editor.commands.toggleCodeBlock()}
+      onClick={() => editor.chain().focus().toggleCodeBlock().run()}
       isActive={editor.isActive("codeBlock")}
       icon={<BsCodeSlash />}
       disabled={!editor.isEditable}

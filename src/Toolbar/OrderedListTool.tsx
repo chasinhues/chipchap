@@ -6,7 +6,7 @@ const OrderedListTool = ({ editor }: WithEditor) => {
   return (
     <ToolbarButton
       label="Numbered list"
-      onClick={() => editor.commands.toggleOrderedList()}
+      onClick={() => editor.chain().focus().toggleOrderedList().run()}
       isActive={editor.isActive("orderedList")}
       icon={<BsListOl />}
       disabled={!editor.isEditable}

@@ -6,7 +6,7 @@ const ParagraphTool = ({ editor }: WithEditor) => {
   return (
     <ToolbarButton
       label="Normal text"
-      onClick={() => editor.commands.setParagraph()}
+      onClick={() => editor.chain().focus().setParagraph().run()}
       isActive={editor.isActive("paragraph")}
       icon={<BsType />}
       disabled={!editor.isEditable}

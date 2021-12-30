@@ -6,7 +6,7 @@ const UnorderedListTool = ({ editor }: WithEditor) => {
   return (
     <ToolbarButton
       label="Bullet list"
-      onClick={() => editor.commands.toggleBulletList()}
+      onClick={() => editor.chain().focus().toggleBulletList().run()}
       isActive={editor.isActive("bulletList")}
       icon={<BsListUl />}
       disabled={!editor.isEditable}

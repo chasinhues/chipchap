@@ -6,7 +6,7 @@ const BoldTool = ({ editor }: WithEditor) => {
   return (
     <ToolbarButton
       label="Bold"
-      onClick={() => editor.commands.toggleBold()}
+      onClick={() => editor.chain().focus().toggleBold().run()}
       isActive={editor.isActive("bold")}
       icon={<BsTypeBold />}
       disabled={!editor.isEditable}
