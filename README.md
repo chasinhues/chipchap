@@ -29,7 +29,7 @@ export const MyComponent = () => {
 
 ## Version 0.0.0
 
-- supports the most basic extensions (~~bold~~, ~~italic~~, strike, ~~code~~, ~~text~~, ~~h1~~, ~~h2~~, ~~h3~~, ~~bullet list~~, ~~ordered list~~, ~~code block~~, ~~block quote~~, horizontal rule)
+- supports the most basic extensions (~~bold~~, ~~italic~~, ~~strike~~, ~~code~~, ~~text~~, ~~h1~~, ~~h2~~, ~~h3~~, ~~bullet list~~, ~~ordered list~~, ~~code block~~, ~~block quote~~, ~~horizontal rule~~)
 - no styling
 - support fixed menu
 
