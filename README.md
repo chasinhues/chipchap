@@ -27,18 +27,11 @@ export const MyComponent = () => {
 
 # Roadmap
 
-## Version 0.0.0
-
-- supports the most basic extensions (~~bold~~, ~~italic~~, ~~strike~~, ~~code~~, ~~text~~, ~~h1~~, ~~h2~~, ~~h3~~, ~~bullet list~~, ~~ordered list~~, ~~code block~~, ~~block quote~~, ~~horizontal rule~~)
-- no styling
-- support fixed menu
-
-## Version 1.0.0
-
-- support every extension in starterkit
-- add a way to style the extension, ideally through the consumers chakra theme
-
-## Version 2.0.0
-
-- support floating and bubble menus
-- add support for other simple extensions (link)
+1. ~~supports tiptap starterkit extensions (bold, italic, strike, code, text, h1, h2, h3, bullet list, ordered list, code block, block quote, horizontal rule)~~
+1. ~~support fixed menu~~
+1. ~~support no menu~~
+1. ~~support every extension in starterkit~~
+1. add a way to style the editor, ideally through the consumers chakra theme
+1. code and codeblock styling (highlight/lowlight?)
+1. support floating and bubble menus
+1. add support for other simple extensions (link)
