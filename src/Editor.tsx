@@ -15,7 +15,7 @@ export const Editor = ({ editor, menu = "fixed" }: EditorProps) => {
   }
   return (
     <Stack>
-      <Toolbar editor={editor} />
+      {menu === "fixed" ? <Toolbar editor={editor} /> : null}
       <EditorContent editor={editor} />
     </Stack>
   );
