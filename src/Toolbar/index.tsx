@@ -14,6 +14,7 @@ import {
   HeadingThreeTool,
   HeadingTwoTool,
 } from "./HeadingTool";
+import StrikeTool from "./StrikeTool";
 
 interface ToolbarProps extends WithEditor, WrapProps {}
 
@@ -32,6 +33,7 @@ export const Toolbar = ({ editor, ...wrapProps }: ToolbarProps) => {
       {/* Inline styles */}
       <BoldTool editor={editor} />
       <ItalicTool editor={editor} />
+      <StrikeTool editor={editor} />
       <CodeTool editor={editor} />
       <Divider orientation="vertical" />
 
