@@ -1,5 +1,3 @@
-import { Divider, Skeleton, Wrap, WrapProps } from "@chakra-ui/react";
-import { WithEditor } from "../types";
 import BoldTool from "./BoldTool";
 import CodeBlockTool from "./CodeBlockTool";
 import CodeTool from "./CodeTool";
@@ -15,15 +13,15 @@ import {
   HeadingTwoTool,
 } from "./HeadingTool";
 import StrikeTool from "./StrikeTool";
+import { WithEditor } from "../types";
+import { Wrap, Divider, Skeleton } from "@chakra-ui/react";
 
-interface ToolbarProps extends WithEditor, WrapProps {}
-
-export const Toolbar = ({ editor, ...wrapProps }: ToolbarProps) => {
+export const Toolbar = ({ editor }: WithEditor) => {
   if (!editor) {
     return <ToolbarSkeleton />;
   }
   return (
-    <Wrap shouldWrapChildren {...wrapProps}>
+    <Wrap shouldWrapChildren>
       <ParagraphTool editor={editor} />
       <HeadingOneTool editor={editor} />
       <HeadingTwoTool editor={editor} />

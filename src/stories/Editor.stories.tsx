@@ -1,7 +1,7 @@
 import React from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 
-import { Editor } from "../Editor";
+import { Editor } from "..";
 import { useEditor } from "@tiptap/react";
 import StarterKit from "@tiptap/starter-kit";
 
