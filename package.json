@@ -4,6 +4,7 @@
   "module": "dist/chipchap.esm.min.js",
   "main": "dist/chipchap.esm.min.js",
   "author": "Jason Hughes",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/chasinhues/chipchap.git"
