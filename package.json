@@ -1,7 +1,20 @@
 {
   "name": "chipchap",
   "version": "1.0.0",
-  "main": "index.tsx",
+  "module": "dist/chipchap.esm.min.js",
+  "main": "dist/chipchap.esm.min.js",
+  "author": "Jason Hughes",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chasinhues/chipchap.git"
+  },
+  "bugs": {
+    "url": "https://github.com/chasinhues/chipchap/issues"
+  },
+  "homepage": "https://github.com/chasinhues/chipchap#readme",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "rollup --config",
     "storybook": "start-storybook -p 6006",
@@ -30,6 +43,7 @@
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",
     "rollup": "^2.62.0",
+    "rollup-plugin-terser": "^7.0.2",
     "typescript": "^4.3.2"
   }
 }
