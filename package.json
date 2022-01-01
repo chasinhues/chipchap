@@ -14,7 +14,7 @@
   },
   "homepage": "https://github.com/chasinhues/chipchap#readme",
   "files": [
-    "dist"
+    "dist/*.js"
   ],
   "scripts": {
     "build": "rollup --config",
