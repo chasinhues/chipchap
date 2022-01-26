@@ -13,10 +13,10 @@ import {
   HeadingTwoTool,
 } from "./HeadingTool";
 import StrikeTool from "./StrikeTool";
-import { WithEditor } from "../types";
+import { EditorComponent } from "../types";
 import { Wrap, Divider, Skeleton } from "@chakra-ui/react";
 
-export const Toolbar = ({ editor }: WithEditor) => {
+export const Toolbar: EditorComponent = ({ editor }) => {
   if (!editor) {
     return <ToolbarSkeleton />;
   }

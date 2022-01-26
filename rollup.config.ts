@@ -13,8 +13,8 @@ const config = {
   },
   plugins: [
     nodeResolve(),
-    typescript(),
     commonjs(),
+    typescript(),
     babel({ babelHelpers: "bundled" }),
     terser(),
   ],

@@ -1,11 +1,12 @@
 import { BsType } from "react-icons/bs";
-import { WithEditor } from "../types";
+import { EditorComponent } from "../types";
 import ToolbarButton from "./ToolbarButton";
 
-const ParagraphTool = ({ editor }: WithEditor) => {
+const ParagraphTool: EditorComponent = ({ editor }) => {
   return (
     <ToolbarButton
       label="Normal text"
+      // @ts-ignore
       onClick={() => editor.chain().focus().setParagraph().run()}
       isActive={editor.isActive("paragraph")}
       icon={<BsType />}

@@ -1,11 +1,12 @@
 import { BsTypeItalic } from "react-icons/bs";
-import { WithEditor } from "../types";
+import { EditorComponent } from "../types";
 import ToolbarButton from "./ToolbarButton";
 
-const ItalicTool = ({ editor }: WithEditor) => {
+const ItalicTool: EditorComponent = ({ editor }) => {
   return (
     <ToolbarButton
       label="Italic"
+      // @ts-ignore
       onClick={() => editor.chain().focus().toggleItalic().run()}
       isActive={editor.isActive("italic")}
       icon={<BsTypeItalic />}

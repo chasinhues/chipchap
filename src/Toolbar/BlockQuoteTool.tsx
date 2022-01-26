@@ -1,12 +1,13 @@
 import { GoQuote } from "react-icons/go";
-import { WithEditor } from "../types";
+import { EditorComponent } from "../types";
 import ToolbarButton from "./ToolbarButton";
 
-const BlockQuoteTool = ({ editor }: WithEditor) => {
+const BlockQuoteTool: EditorComponent = ({ editor }) => {
   return (
     <ToolbarButton
       label="Blockquote"
-      onClick={() => editor.commands.toggleBlockquote()}
+      // @ts-ignore
+      onClick={() => editor.chain().focus().toggleBlockquote().run()}
       isActive={editor.isActive("blockquote")}
       icon={<GoQuote />}
       disabled={!editor.isEditable}

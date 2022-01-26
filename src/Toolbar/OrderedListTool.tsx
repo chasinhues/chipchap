@@ -1,11 +1,12 @@
 import { BsListOl } from "react-icons/bs";
-import { WithEditor } from "../types";
+import { EditorComponent } from "../types";
 import ToolbarButton from "./ToolbarButton";
 
-const OrderedListTool = ({ editor }: WithEditor) => {
+const OrderedListTool: EditorComponent = ({ editor }) => {
   return (
     <ToolbarButton
       label="Numbered list"
+      // @ts-ignore
       onClick={() => editor.chain().focus().toggleOrderedList().run()}
       isActive={editor.isActive("orderedList")}
       icon={<BsListOl />}

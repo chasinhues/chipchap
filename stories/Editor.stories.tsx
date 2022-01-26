@@ -1,7 +1,6 @@
 import React from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
-
-import { Editor } from "..";
+import { Editor } from "../src/Editor";
 import { useEditor } from "@tiptap/react";
 import StarterKit from "@tiptap/starter-kit";
 
@@ -10,8 +9,7 @@ export default {
   component: Editor,
 } as ComponentMeta<typeof Editor>;
 
-const Template: ComponentStory<typeof Editor> = (args) => <Editor {...args} />;
-export const Primary = () => {
+export const Primary: ComponentStory<typeof Editor> = () => {
   const editor = useEditor({ extensions: [StarterKit] });
   return <Editor editor={editor} />;
 };

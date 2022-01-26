@@ -1,11 +1,12 @@
 import { BsListUl } from "react-icons/bs";
-import { WithEditor } from "../types";
+import { EditorComponent } from "../types";
 import ToolbarButton from "./ToolbarButton";
 
-const UnorderedListTool = ({ editor }: WithEditor) => {
+const UnorderedListTool: EditorComponent = ({ editor }) => {
   return (
     <ToolbarButton
       label="Bullet list"
+      // @ts-ignore
       onClick={() => editor.chain().focus().toggleBulletList().run()}
       isActive={editor.isActive("bulletList")}
       icon={<BsListUl />}

@@ -1,11 +1,12 @@
 import { BsTypeStrikethrough } from "react-icons/bs";
-import { WithEditor } from "../types";
+import { EditorComponent } from "../types";
 import ToolbarButton from "./ToolbarButton";
 
-const StrikeTool = ({ editor }: WithEditor) => {
+const StrikeTool: EditorComponent = ({ editor }) => {
   return (
     <ToolbarButton
       label="Strike"
+      // @ts-ignore
       onClick={() => editor.chain().focus().toggleStrike().run()}
       isActive={editor.isActive("strike")}
       icon={<BsTypeStrikethrough />}

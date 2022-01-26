@@ -1,8 +1,9 @@
 {
   "name": "chipchap",
   "version": "1.0.0",
-  "module": "dist/chipchap.esm.min.js",
-  "main": "dist/chipchap.esm.min.js",
+  "module": "build/index.js",
+  "main": "build/index.js",
+  "types": "build",
   "author": "Jason Hughes",
   "license": "MIT",
   "repository": {
@@ -14,12 +15,13 @@
   },
   "homepage": "https://github.com/chasinhues/chipchap#readme",
   "files": [
-    "dist/*.js"
+    "build"
   ],
   "scripts": {
-    "build": "rollup --config",
+    "build": "rollup --config && tsc -b",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "prepublishOnly": "build"
   },
   "dependencies": {
     "@chakra-ui/react": "^1.7.3",

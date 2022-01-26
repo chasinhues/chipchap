@@ -1,11 +1,12 @@
 import { BsCodeSlash } from "react-icons/bs";
-import { WithEditor } from "../types";
+import { EditorComponent } from "../types";
 import ToolbarButton from "./ToolbarButton";
 
-const CodeBlockTool = ({ editor }: WithEditor) => {
+const CodeBlockTool: EditorComponent = ({ editor }) => {
   return (
     <ToolbarButton
       label="Codeblock"
+      // @ts-ignore
       onClick={() => editor.chain().focus().toggleCodeBlock().run()}
       isActive={editor.isActive("codeBlock")}
       icon={<BsCodeSlash />}
